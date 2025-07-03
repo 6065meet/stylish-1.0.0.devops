@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: stylish-deployment
+  namespace: stylish-namespace
 spec:
   replicas: 2
   selector:
@@ -17,4 +18,3 @@ spec:
         image: 6065meet/stylish:latest
         ports:
         - containerPort: 80
-

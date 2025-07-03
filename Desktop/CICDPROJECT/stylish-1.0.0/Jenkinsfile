@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
-                sh 'kubectl set image deployment/stylish-deployment stylish=$IMAGE'
+                sh 'kubectl set image deployment/stylish-deployment stylish=$IMAGE -n stylish-namespace'
             }
         }
     }
